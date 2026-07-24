@@ -75,7 +75,7 @@ def health() -> dict:
 async def create_job(
     request: Request,
     author: str = Form(""),
-    synth_model: str = Form("anthropic/claude-opus-4.8"),
+    synth_model: str = Form("z-ai/glm-5.2"),
     files: list[UploadFile] = File(...),
 ) -> JSONResponse:
     job_id = uuid.uuid4().hex[:12]

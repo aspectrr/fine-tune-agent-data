@@ -79,7 +79,7 @@ async function _walk(entry, dirPath = "") {
 
 export default function App() {
   const [author, setAuthor] = createSignal("");
-  const [synth, setSynth] = createSignal("anthropic/claude-opus-4.8");
+  const [synth, setSynth] = createSignal("z-ai/glm-5.2");
   const [files, setFiles] = createSignal([]);
   const [dragging, setDragging] = createSignal(false);
 
@@ -374,8 +374,7 @@ export default function App() {
           <div class="field">
             <label>Teacher model</label>
             <select value={synth()} onChange={(e) => setSynth(e.target.value)}>
-              <option value="anthropic/claude-opus-4.8">Claude Opus — best quality</option>
-              <option value="anthropic/claude-sonnet-4">Claude Sonnet — balanced</option>
+              <option value="z-ai/glm-5.2">GLM 5.2 — cheap & good (recommended)</option>
               <option value="google/gemini-2.5-flash">Gemini Flash — cheapest</option>
             </select>
           </div>

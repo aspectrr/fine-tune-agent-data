@@ -301,7 +301,7 @@ export default function Guide() {
         <h2 class="section-title">Train your model</h2>
         <ol class="steps">
           <li>Enter the email address <b>you send from</b> — only needed for <code>.mbox</code>/<code>.eml</code>.</li>
-          <li>Pick a teacher model — <b>Opus</b> gives the best result; <b>Flash</b> is cheaper.</li>
+          <li>Pick a teacher model — <b>GLM 5.2</b> (default, cheap and good) or <b>Gemini Flash</b> (cheapest).</li>
           <li>Upload your file(s).</li>
           <li>Click <b>Train</b>.</li>
         </ol>
