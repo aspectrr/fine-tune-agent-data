@@ -61,7 +61,7 @@ Use the MCP `create_job` tool (or the REST equivalent). For each file, base64-en
 
 **MCP:**
 ```
-create_job(author="<emails or empty>", synth_model="google/gemini-2.5-flash",
+create_job(author="<emails or empty>", synth_model="z-ai/glm-5.2",
            files=[{"name":"Sent.mbox","content_b64":"..."}])
 ```
 
@@ -70,11 +70,11 @@ create_job(author="<emails or empty>", synth_model="google/gemini-2.5-flash",
 curl -X POST <TIMBRE_URL>/api/jobs \
   -H "Authorization: Bearer <API_KEY>" \
   -F 'author=<emails or empty>' \
-  -F 'synth_model=google/gemini-2.5-flash' \
+  -F 'synth_model=z-ai/glm-5.2' \
   -F 'files=@/path/to/Sent.mbox'
 ```
 
-`synth_model`: `anthropic/claude-opus-4.8` (best), `anthropic/claude-sonnet-4` (balanced), `google/gemini-2.5-flash` (cheapest). The teacher invents writing prompts for each sample; the user's real text is the training target.
+`synth_model` (default `z-ai/glm-5.2`, cheap and good): `z-ai/glm-5.2` (recommended) or `google/gemini-2.5-flash` (cheapest). The teacher invents writing prompts for each sample; the user's real text is the training target.
 
 You get back `{"job_id": "..."}`. **Tell the user the job started and to open the web UI** — because the agent and the web page share the same API key, their run appears there automatically with live progress.
 

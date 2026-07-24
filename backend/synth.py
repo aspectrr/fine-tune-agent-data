@@ -17,7 +17,7 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
-SYNTH_MODEL = "anthropic/claude-opus-4.8"  # high-quality instruction generation
+SYNTH_MODEL = "z-ai/glm-5.2"  # cheap + strong synthesis (~7× cheaper than Sonnet)
 PAIRS_PER_SAMPLE = 3
 MAX_OUT = 600
 MAX_CALLS = 8
